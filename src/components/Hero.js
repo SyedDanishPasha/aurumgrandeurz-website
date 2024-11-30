@@ -31,8 +31,21 @@ const Hero = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validate form fields before redirecting
+    if (!formData.fullName || !formData.phone || !formData.eventDate || !formData.location) {
+      alert("Please fill out all required fields.");
+      return;
+    }
+
     console.log("Form submitted", formData);
-    // Add your form submission logic (e.g., send data to the server).
+
+    // Redirect to WhatsApp with prefilled message
+    const whatsappNumber = "8660062906";
+    const whatsappMessage = `Hello, my name is ${formData.fullName}. I am interested in wedding planning for ${formData.eventDate} at ${formData.location}. Please contact me at ${formData.code} ${formData.phone}.`;
+
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.location.href = whatsappURL;
   };
 
   // List of cities (for simplicity, a few cities are included)
@@ -321,7 +334,7 @@ const Hero = () => {
             <label htmlFor="updates">Send me updates on WhatsApp</label>
           </div>
 
-          <button type="submit" className="cta-button"><a href="https://wa.me/8660062906" target="_blank" rel="noopener noreferrer">Get Instant Quote</a></button>
+          <button type="submit" className="cta-button">Get Instant Quote</button>
         </form>
       </div>
     </section>

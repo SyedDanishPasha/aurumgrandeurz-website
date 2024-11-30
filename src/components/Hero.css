@@ -112,10 +112,6 @@ form button:hover {
   background-color: #e5533b;
 }
 
-form button a{
-  text-decoration: none;
-  color: inherit;
-}
 
 .checkbox-container {
   display: flex;
