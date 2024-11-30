@@ -1,28 +1,170 @@
 .hero-section {
-    background-image: url('');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding-top: 100px;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.text-container {
+  max-width: 40%;
+  color: white;
+  padding-right: 250px;
+}
+
+.text-line-bold {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.text-line {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 1.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  padding-top: 550px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-container p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+form input,
+form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.phone-container {
+  display: flex;
+  gap: 5px;
+}
+
+.phone-container select {
+  flex: 1;
+}
+
+form button {
+  padding: 15px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #e5533b;
+}
+
+form button a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+/* New styling for the custom date picker */
+.custom-date-picker {
+  position: relative;
+  background-color: #fff;
+  font-size: 1rem;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: border 0.3s;
+}
+
+.custom-date-picker:focus {
+  border-color: #ff6347;
+  outline: none;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .text-container {
+    max-width: 100%;
     text-align: center;
   }
-  
-  .hero-content {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+
+  .form-container {
+    width: 90%;
+    max-width: 350px;
+    right: 5%;
   }
-  
-  .cta-button {
-    padding: 15px;
-    background-color: #ff6347;
-    color: white;
-    border: none;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
+
+  .form-container h2 {
+    font-size: 1.5rem;
   }
-  
+
+  .form-container p {
+    font-size: 0.9rem;
+  }
+}
