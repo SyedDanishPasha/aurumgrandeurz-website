@@ -31,7 +31,7 @@
 
 .gallery-image {
   width: 100%; /* Make images responsive and cover the container */
-  height: 500px; /* Fixed height for consistency */
+  height: 450px; /* Fixed height for consistency */
   object-fit: cover; /* Maintain aspect ratio and cover the container */
   transition: opacity 5s ease, transform 3s ease; /* Smooth transition for opacity and scaling */
   opacity: 1; /* Ensure the image starts fully visible */
