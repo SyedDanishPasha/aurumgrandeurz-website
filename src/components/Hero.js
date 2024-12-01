@@ -31,22 +31,23 @@ const Hero = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     // Validate form fields before redirecting
     if (!formData.fullName || !formData.phone || !formData.eventDate || !formData.location) {
       alert("Please fill out all required fields.");
       return;
     }
-
+  
     console.log("Form submitted", formData);
-
+  
     // Redirect to WhatsApp with prefilled message
     const whatsappNumber = "8660062906";
     const whatsappMessage = `Hello, my name is ${formData.fullName}. I am interested in wedding planning for ${formData.eventDate} at ${formData.location}. Please contact me at ${formData.code} ${formData.phone}.`;
-
+  
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-    window.location.href = whatsappURL;
+    window.open(whatsappURL, "_blank");
   };
+  
 
   // List of cities (for simplicity, a few cities are included)
   const indianCities = [
