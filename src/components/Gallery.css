@@ -26,14 +26,14 @@
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 .gallery-image {
   width: 100%; /* Make images responsive and cover the container */
   height: 500px; /* Fixed height for consistency */
   object-fit: cover; /* Maintain aspect ratio and cover the container */
-  transition: opacity 1s ease, transform 1s ease; /* Smooth transition for opacity and scaling */
+  transition: opacity 5s ease, transform 3s ease; /* Smooth transition for opacity and scaling */
   opacity: 1; /* Ensure the image starts fully visible */
 }
 
