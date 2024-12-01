@@ -1,7 +1,7 @@
 /* Header CSS with golden and black theme */
 .header-container {
     background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent black background */
-    color: goldenrod;
+    color: #0A0A0A;
     padding: 10px 150px 10px 150px; /* Adjust padding */
     display: flex;
     justify-content: space-between;
@@ -17,7 +17,7 @@
   .header-container.shrunk {
     padding: 5px 50px; /* Reduce padding when header shrinks */
     font-size: 10px; /* Shrink font size */
-    background-color: white;
+    background-color: #FDF7E9;
   }
   
   .logo-container {
@@ -43,7 +43,7 @@
   
   .logo-text {
     font-size: 24px;
-    color: goldenrod;
+    color: #0A0A0A;
     font-family: "Lucida Handwriting", cursive;;
     font-weight: bold;
     text-transform: uppercase;
@@ -61,7 +61,7 @@
   
   .navbar-link {
     text-decoration: none; /* Remove underline */
-    color: goldenrod; /* Default text color */
+    color: #0A0A0A; /* Default text color */
     font-weight: bold;
     font-size: 18px;
     transition: all 0.3s ease; /* Smooth transition for color and background */
@@ -70,8 +70,8 @@
   }
   
   .navbar-link:hover {
-    color: #fff; /* Change text color on hover */
-    background-color: goldenrod; /* Add background color on hover */
+    color: #FDF7E9; /* Change text color on hover */
+    background-color: #0A0A0A; /* Add background color on hover */
   }
   
   .header-container.shrunk .navbar-link {
