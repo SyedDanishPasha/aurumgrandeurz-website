@@ -1,5 +1,10 @@
 import React from "react";
-import Logo from '../images/AurumGrandeurzLogo.png' // Update this to the actual path of your logo
+import Logo from '../images/AurumGrandeurzLogo.png';// Update this to the actual path of your logo
+import { CiFacebook } from "react-icons/ci";
+import { CiInstagram } from "react-icons/ci";
+import { FaWhatsapp } from "react-icons/fa";
+import { TbMail } from "react-icons/tb";
+import { CiPhone } from "react-icons/ci";
 import "./Footer.css";
 
 const Footer = () => {
@@ -24,13 +29,13 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="social-media-icons">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src="./facebook-icon.png" alt="Facebook" className="social-icon" />
+              <CiFacebook className="social-icon"/>
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src="./instagram-icon.png" alt="Instagram" className="social-icon" />
+              <CiInstagram className="social-icon"/> 
             </a>
             <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer">
-              <img src="./whatsapp-icon.png" alt="WhatsApp" className="social-icon" />
+              <FaWhatsapp className="social-icon"/>
             </a>
           </div>
         </div>
@@ -41,9 +46,9 @@ const Footer = () => {
         {/* Contact Details Section */}
         <div className="footer-section contact-section">
           <h3>Contact Details</h3>
-          <h4>Email:</h4>
-          <h4>Phone:</h4>
-          
+          <h4><TbMail  className="contact-icon"/> TestMail </h4>
+          <h4><CiPhone className="contact-icon"/> TestPhone </h4>
+
           <hr />
           <ul>
             <li>
