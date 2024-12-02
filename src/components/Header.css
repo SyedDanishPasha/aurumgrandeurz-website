@@ -77,6 +77,24 @@
   .header-container.shrunk .navbar-link {
     font-size: 12px; /* Shrink font size when scrolled */
   }
+
+  /* Hamburger Menu */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 21px;
+  width: 30px;
+}
+
+.menu-icon .bar {
+  background-color: #0A0A0A;
+  height: 3px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
   
   
   /* Mobile responsiveness */
@@ -100,25 +118,31 @@
       font-size: 20px;
       color: #0A0A0A;
     }
-  
-    .burger-icon {
-      display: block;
-      background-color: #0A0A0A;
-      width: 10px;
-      height: 3px;
-      margin: 5px;
-      cursor: pointer;
-    }
-  
-    .burger-icon div {
-      width: 100%;
-      height: 5px;
-      background-color: #0A0A0A;
-      margin: 5px 0;
-    }
-  
+
     .navbar-link:hover {
       color: #FDF7E9;
     }
+  
+    .menu-icon {
+      display: flex;
+    }
+
+    /* Hamburger icon turns into 'X' when menu is open */
+    .menu-icon.open .bar:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 7px;
+    }
+
+    .menu-icon.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.open .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -7px;
+    }
+  
   }
   

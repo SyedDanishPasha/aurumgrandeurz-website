@@ -4,8 +4,13 @@ import './Header.css'; // Import Header-specific CSS
 import Logo from '../images/AurumGrandeurzLogo.png';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);// Mobile menu active state
   const [isScrolling, setIsScrolling] = useState(false); // Track if scrolling
-  const [isMenuActive, setIsMenuActive] = useState(false); // Mobile menu active state
+  
+   // Toggle mobile menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   // Check the scroll position to shrink the header
   const handleScroll = () => {
@@ -22,23 +27,18 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll); // Cleanup
   }, []);
 
-  // Toggle mobile menu
-  const toggleMenu = () => {
-    setIsMenuActive(!isMenuActive);
-  };
-
   return (
     <header className={`header-container ${isScrolling ? 'shrunk' : ''}`}>
       <div className="logo-container">
         <img src={Logo} alt="Wedding Planner Logo" className="logo" />
         <span className="logo-text">Aurum Grandeurz</span>
       </div>
-      <div className="burger-icon" onClick={toggleMenu}>
-        <div></div>
-        <div></div>
-        <div></div>
+      <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
       </div>
-      <nav className={`navbar ${isMenuActive ? 'active' : ''}`}>
+      <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
         <ScrollLink to="main" smooth={true} duration={500} className="navbar-link">
           Home
         </ScrollLink>
