@@ -1,24 +1,26 @@
 /* Header CSS with golden and black theme */
 .header-container {
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent black background */
-    color: #0A0A0A;
-    padding: 10px 150px 10px 150px; /* Adjust padding */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    transition: all 0.3s ease;
-  }
-  
-  .header-container.shrunk {
-    padding: 5px 50px; /* Reduce padding when header shrinks */
-    font-size: 10px; /* Shrink font size */
-    background-color: #FDF7E9;
-  }
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+  color: #0A0A0A;
+  padding: 10px 150px; /* Adjust padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header-container.shrunk {
+  padding: 5px 50px; /* Reduce padding when header shrinks */
+  font-size: 10px; /* Shrink font size */
+  background-color: #FDF7E9;
+  border-bottom: 1px solid #0A0A0A; /* Change border color when shrunk */
+  box-shadow: 0 5px 10px rgba(10, 10, 10, 0.5); /* Adjust shadow for shrunk state */
+}
   
   .logo-container {
     display: flex;
