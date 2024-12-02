@@ -1,11 +1,35 @@
-.App {
-  text-align: center;
-  font-family: 'Great Vibes', cursive;
+.floating-button {
+  position: fixed;
+  bottom: 20px;    /* Position from the bottom */
+  right: 30px;     /* Position from the right */
+  background-color: #ff6347;
+  color: #0A0A0A;    /* Text color */
+  border-radius: 50%; /* Circular shape */
+  width: 60px;       /* Set width for the circle */
+  height: 60px;      /* Set height for the circle */
+  padding: 0;        /* No extra padding */
+  display: none;     /* Hidden by default */
+  cursor: pointer;   /* Pointer on hover */
+  z-index: 1000;     /* Ensure it is on top of other elements */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in/fade-out */
+  text-align: center; /* Center the content (arrow) */
+  line-height: 60px;  /* Vertically center the arrow */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.floating-button.visible {
+  display: block;   /* Make it visible */
+}
+
+/* Hover effect */
+.floating-button:hover {
+  background-color: #0A0A0A;
+  color: #ff6347;   /* Change background on hover */
+}
+
+.floating-button span {
+  font-size: 60px; /* Adjust the font size for the icon */
+  line-height: 60px; /* Vertically align the arrow in the circle */
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -27,13 +51,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

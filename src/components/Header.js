@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll'; // Import from react-scroll
 import './Header.css'; // Import Header-specific CSS
 import Logo from '../images/AurumGrandeurzLogo.png';
 
@@ -39,9 +39,18 @@ const Header = () => {
         <div></div>
       </div>
       <nav className={`navbar ${isMenuActive ? 'active' : ''}`}>
-        <Link to="/" className="navbar-link">Home</Link>
-        <Link to="./Services.js" className="navbar-link">Services</Link>
-        <Link to="/" className="navbar-link">Get Started</Link>
+        <ScrollLink to="main" smooth={true} duration={500} className="navbar-link">
+          Home
+        </ScrollLink>
+        <ScrollLink to="gallery" smooth={true} duration={500} className="navbar-link">
+          Gallery
+        </ScrollLink>
+        <ScrollLink to="services" smooth={true} duration={500} className="navbar-link">
+          Services
+        </ScrollLink>
+        <ScrollLink to="contact" smooth={true} duration={500} className="navbar-link">
+          Contact Us
+        </ScrollLink>
       </nav>
     </header>
   );

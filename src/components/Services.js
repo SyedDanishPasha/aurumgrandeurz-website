@@ -11,8 +11,8 @@ const Services = () => {
   };
 
   return (
-    <section className="services-section">
-      <h2>Our Services</h2>
+    <section id="services" className="services-section">
+      <h2 id="services">Our Services</h2>
       <div className="service-cards">
         <div className="service-card">
           <h2>Al Tijarah</h2>

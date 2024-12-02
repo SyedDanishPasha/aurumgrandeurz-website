@@ -50,7 +50,7 @@ const Gallery = () => {
   }, []);
 
   return (
-    <section className="gallery-section">
+    <section id="gallery" className="gallery-section">
       <h2 className="gallery-title">Our Gallery</h2>
       <p className="gallery-subtitle">Explore Our Wedding Expertise</p>
       <div className="gallery-grid">

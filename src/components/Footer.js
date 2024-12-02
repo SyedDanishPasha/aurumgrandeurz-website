@@ -17,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer-container">
+    <footer id="contact" className="footer-container">
       <div className="footer-block">
         {/* Logo Section */}
         <div className="footer-section logo-section">
