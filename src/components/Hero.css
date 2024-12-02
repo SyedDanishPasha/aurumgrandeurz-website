@@ -1,11 +1,13 @@
+/* Hero Section */
 .hero-section {
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FDF7E9;
+  color: #fdf7e9;
   padding-top: 100px;
+  overflow: hidden;
 }
 
 .hero-video {
@@ -16,12 +18,14 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  filter: brightness(70%);
 }
 
 .text-container {
   max-width: 40%;
   color: #f9f9f9;
   padding-right: 250px;
+  text-align: left;
 }
 
 .text-line-bold {
@@ -32,6 +36,7 @@
   transform: translateY(-20px);
   animation: fadeIn 1.5s ease-in-out forwards;
   font-family: "Lucida Console", Courier, monospace;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .text-line {
@@ -40,23 +45,30 @@
   margin-bottom: 20px;
   opacity: 0;
   transform: translateY(-20px);
-  animation: fadeIn 1.5s ease-in-out forwards;
-  animation-delay: 0.5s;
+  animation: fadeIn 1.5s ease-in-out forwards 0.5s;
   font-family: "Lucida Console", Courier, cursive;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+/* Form Container */
 .form-container {
   position: absolute;
   top: 50%;
   right: 10%;
   transform: translateY(-50%);
-  background-color: rgba(253, 247, 233, 0.9);
+  background-color: rgba(253, 247, 233, 0.95);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 15px;
   max-width: 400px;
   width: 100%;
   color: #020816;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-52%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .form-container h2 {
@@ -80,51 +92,138 @@ form {
 form label {
   font-size: 1rem;
   margin-bottom: 5px;
+  font-weight: 500;
 }
 
 form input,
 form select {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 13px;
   font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
+form input:not(.custom-date-picker):focus,
+form select:focus {
+  border-color: #ff6347;
+  box-shadow: 0 0 5px rgba(255, 99, 71, 0.7);
+  outline: none;
+}
+
+/* Phone Input Styling */
 .phone-container {
   display: flex;
-  border-radius: 13px;
-  gap: 5px;
+  gap: 10px;
 }
 
 .phone-container select {
   flex: 1;
-}
-
-/* New styling for the custom date picker */
-.custom-date-picker {
-  position: relative;
   background-color: #fff;
-  font-size: 1rem;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 13px;
-  transition: border 0.3s;
 }
 
-.custom-date-picker:focus {
-  border-color: #ccc;
-  outline: none;
+.phone-container input {
+  flex: 2;
 }
 
-
-.checkbox-container {
+/* Date Picker Styling */
+/* Event Date Wrapper (Focus/Hover effect only on the outer container) */
+.date-picker-wrapper {
+  position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.9rem;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+  background-color: #fff;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  cursor: pointer;
+}
+
+.date-picker-wrapper:focus-within {
+  border-color: #ff6347;
+  
+  box-shadow: none;
+}
+
+/* Prevent child elements from showing hover or focus effects */
+.custom-date-picker,
+.calendar-icon {
+  border: none;
+  outline: none;
+  background: transparent; /* Matches the wrapper for seamless design */
+  cursor: inherit; /* Inherit cursor from parent */
+}
+
+/* Calendar Icon Styling */
+.calendar-icon {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+/* Optional hover effect for the icon if needed */
+.calendar-icon:hover {
+  color: #ff6347;
+}
+
+/* Custom Date Picker Input */
+.custom-date-picker {
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* React DatePicker Customization */
+.react-datepicker {
+  background-color: #fdf7e9;
+  border: 1px solid #ff6347;
+  border-radius: 10px;
+}
+
+.react-datepicker__header {
+  background-color: #ff6347;
+  color: #fff;
+  border-bottom: 1px solid #e5533b;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #ff6347;
+  color: #fff;
 }
 
 
+.react-datepicker__day:hover {
+  background-color: #e5533b;
+  color: #030202;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: #000;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: #020816;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.react-datepicker__day {
+  font-size: 1rem;
+  padding: 10px;
+  margin: 0.2rem;
+  border-radius: 50%;
+  color: #020816;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Submit Button Styling */
 form button {
   padding: 15px;
   background-color: #ff6347;
@@ -133,12 +232,20 @@ form button {
   font-size: 18px;
   border-radius: 13px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
   background-color: #e5533b;
+  transform: translateY(-2px);
 }
 
+form button:active {
+  background-color: #d44530;
+  transform: translateY(1px);
+}
+
+/* Animation */
 @keyframes fadeIn {
   to {
     opacity: 1;
