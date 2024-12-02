@@ -41,3 +41,41 @@
 .gallery-item:hover .gallery-image {
   transform: scale(1.1); /* Slight zoom effect on hover */
 }
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    gap: 15px; /* Reduce gap for better spacing */
+  }
+
+  .gallery-image {
+    height: 300px; /* Reduce image height for mobile screens */
+  }
+
+  .gallery-title {
+    font-size: 1.5rem; /* Slightly smaller title font size */
+  }
+
+  .gallery-subtitle {
+    font-size: 1rem; /* Slightly smaller subtitle font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* Still 2 columns for very small screens */
+    gap: 10px; /* Further reduce gap for compact view */
+  }
+
+  .gallery-image {
+    height: 200px; /* Further reduce image height for extra-small screens */
+  }
+
+  .gallery-title {
+    font-size: 1.2rem; /* Even smaller title font size */
+  }
+
+  .gallery-subtitle {
+    font-size: 0.9rem; /* Even smaller subtitle font size */
+  }
+}
