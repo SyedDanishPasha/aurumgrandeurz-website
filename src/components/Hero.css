@@ -20,7 +20,7 @@
 
 .text-container {
   max-width: 40%;
-  color: white;
+  color: #f9f9f9;
   padding-right: 250px;
 }
 
@@ -55,7 +55,7 @@
   border-radius: 10px;
   max-width: 400px;
   width: 100%;
-  color: black;
+  color: #020816;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 

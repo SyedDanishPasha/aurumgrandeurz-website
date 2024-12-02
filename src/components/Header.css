@@ -61,7 +61,7 @@
   
   .navbar-link {
     text-decoration: none; /* Remove underline */
-    color: #0A0A0A; /* Default text color */
+    color: #020816; /* Default text color */
     font-weight: bold;
     font-size: 18px;
     transition: all 0.3s ease; /* Smooth transition for color and background */
@@ -71,7 +71,7 @@
   
   .navbar-link:hover {
     color: #FDF7E9; /* Change text color on hover */
-    background-color: #0A0A0A; /* Add background color on hover */
+    background-color: #020816; /* Add background color on hover */
   }
   
   .header-container.shrunk .navbar-link {
@@ -117,7 +117,7 @@
     }
   
     .navbar-link:hover {
-      color: #fff;
+      color: #FDF7E9;
     }
   }
   
