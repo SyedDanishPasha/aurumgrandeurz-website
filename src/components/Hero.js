@@ -3,6 +3,7 @@ import './Hero.css'; // Import Hero-specific CSS
 import BackgroundVideo from '../images/12207605_1920_1080_24fps.mp4';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"; // Import DatePicker styles
+import { LuCalendarHeart } from "react-icons/lu";
 
 const Hero = () => {
   const [formData, setFormData] = useState({
@@ -121,7 +122,7 @@ const Hero = () => {
               className="calendar-icon"
               onClick={() => document.querySelector('.custom-date-picker').focus()}
             >
-              📅 {/* Replace this with an icon if needed */}
+              <LuCalendarHeart />
             </span>
           </div>
 

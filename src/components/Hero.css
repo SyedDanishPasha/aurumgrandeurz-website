@@ -153,6 +153,7 @@ form select:focus {
 .calendar-icon {
   border: none;
   outline: none;
+  padding: 10px;
   background: transparent; /* Matches the wrapper for seamless design */
   cursor: inherit; /* Inherit cursor from parent */
 }
