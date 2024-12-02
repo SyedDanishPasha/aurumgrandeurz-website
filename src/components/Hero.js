@@ -32,9 +32,16 @@ const Hero = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   
-    // Validate form fields before redirecting
+    // Check if all required fields are filled
     if (!formData.fullName || !formData.phone || !formData.eventDate || !formData.location) {
       alert("Please fill out all required fields.");
+      return;
+    }
+  
+    // Validate phone number length based on selected country code
+    const phoneLength = formData.phone.length;
+    if (formData.code === "IN +91" && phoneLength !== 10) {
+      alert("Please enter a valid 10-digit phone number for India.");
       return;
     }
   
@@ -48,7 +55,6 @@ const Hero = () => {
     window.open(whatsappURL, "_blank");
   };
   
-
   // List of cities (for simplicity, a few cities are included)
   const indianCities = [
     "Delhi", "Mumbai", "Kolkata", "Bangalore", "Chennai", "Hyderabad", "Pune", "Ahmedabad", "Jaipur", "Chandigarh"

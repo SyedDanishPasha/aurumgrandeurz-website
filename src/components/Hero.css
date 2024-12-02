@@ -148,21 +148,23 @@ form button:hover {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .hero-section {
+    padding-top: 20px;
+  }
   .text-container {
-    max-width: 100%;
+    max-width: 80%;
+    padding-right: 0;
     text-align: center;
   }
-
   .form-container {
-    width: 90%;
-    max-width: 350px;
+    top: 40%;
     right: 5%;
+    max-width: 100%;
+    padding: 20px;
   }
-
   .form-container h2 {
     font-size: 1.5rem;
   }
-
   .form-container p {
     font-size: 0.9rem;
   }
