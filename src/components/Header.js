@@ -40,7 +40,8 @@ const Header = () => {
       </div>
       <nav className={`navbar ${isMenuActive ? 'active' : ''}`}>
         <Link to="/" className="navbar-link">Home</Link>
-        <Link to="/form" className="navbar-link">Get Started</Link>
+        <Link to="./Services.js" className="navbar-link">Services</Link>
+        <Link to="/" className="navbar-link">Get Started</Link>
       </nav>
     </header>
   );
