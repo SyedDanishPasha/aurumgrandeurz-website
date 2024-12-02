@@ -253,26 +253,77 @@ form button:active {
   }
 }
 
-/* Mobile Responsiveness */
+/* Mobile-Specific Styles */
 @media (max-width: 768px) {
   .hero-section {
-    padding-top: 20px;
+    flex-direction: column; /* Stack text and form vertically */
+    padding: 20px; /* Add padding for spacing */
+    height: auto; /* Allow height to adjust */
   }
+
   .text-container {
-    max-width: 80%;
+    max-width: 90%; /* Expand text container width */
+    padding-top: 75px;
     padding-right: 0;
-    text-align: center;
+    text-align: center; /* Center-align text for mobile */
+    margin-bottom: 20px; /* Add spacing below text */
   }
+
+  .text-line-bold {
+    font-size: 2rem; /* Scale down font size */
+  }
+
+  .text-line {
+    font-size: 1.5rem; /* Scale down font size */
+  }
+
   .form-container {
-    top: 40%;
-    right: 5%;
-    max-width: 100%;
-    padding: 20px;
+    position: static; /* Remove absolute positioning */
+    transform: none; /* Reset transformation */
+    margin: 0 auto; /* Center form on the screen */
+    width: 90%; /* Make the form container responsive */
+    max-width: 100%; /* Allow full width on smaller screens */
   }
-  .form-container h2 {
-    font-size: 1.5rem;
+
+  .form-container:hover {
+    transform: none; /* Remove the movement */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Keep the original shadow */
   }
-  .form-container p {
-    font-size: 0.9rem;
+
+  form {
+    gap: 10px; /* Reduce gap between form fields */
+  }
+
+  form button {
+    font-size: 16px; /* Adjust button font size */
+    padding: 12px; /* Reduce button padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-line-bold {
+    font-size: 1.8rem; /* Further reduce font size */
+  }
+
+  .text-line {
+    font-size: 1.2rem; /* Further reduce font size */
+  }
+
+  .form-container {
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  form label {
+    font-size: 0.9rem; /* Adjust label font size */
+  }
+
+  form input,
+  form select {
+    font-size: 0.9rem; /* Adjust input font size */
+  }
+
+  form button {
+    font-size: 14px; /* Scale button font size */
+    padding: 10px; /* Adjust padding */
   }
 }
