@@ -44,9 +44,9 @@
   }
   
   .logo-text {
-    font-size: 24px;
+    font-size: 30px;
     color: #0A0A0A;
-    font-family: "Lucida Handwriting", cursive;;
+    font-family:  'Noto Serif Display', serif;
     font-weight: bold;
     text-transform: uppercase;
     transition: font-size 0.3s ease-in-out;
@@ -69,6 +69,7 @@
     transition: all 0.3s ease; /* Smooth transition for color and background */
     padding: 5px 10px; /* Add some space around the text for the box */
     border-radius: 5px; /* Optional: Rounded corners for the box */
+    font-family:  'Noto Serif Display', serif;
   }
   
   .navbar-link:hover {
@@ -77,26 +78,26 @@
   }
   
   .header-container.shrunk .navbar-link {
-    font-size: 12px; /* Shrink font size when scrolled */
+    font-size: 16px; /* Shrink font size when scrolled */
   }
 
   /* Hamburger Menu */
-.menu-icon {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 21px;
-  width: 30px;
-}
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 21px;
+    width: 30px;
+  }
 
-.menu-icon .bar {
-  background-color: #0A0A0A;
-  height: 3px;
-  width: 100%;
-  transition: all 0.3s ease;
-}
+  .menu-icon .bar {
+    background-color: #0A0A0A;
+    height: 3px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
   
   
   /* Mobile responsiveness */

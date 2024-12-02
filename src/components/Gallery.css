@@ -3,6 +3,7 @@
   padding: 20px;
   color: #0A0A0A;
   background-color: #FDF7E9;
+  font-family:  'Noto Serif Display', serif;
 }
 
 .gallery-title {
@@ -49,6 +50,7 @@
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
     gap: 15px; /* Reduce gap for better spacing */
+    margin: 0px 10px 0px 10px;
   }
 
   .gallery-image {

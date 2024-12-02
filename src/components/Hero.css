@@ -35,7 +35,7 @@
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeIn 1.5s ease-in-out forwards;
-  font-family: "Lucida Console", Courier, monospace;
+  font-family:  'Noto Serif Display', serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -46,7 +46,7 @@
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeIn 1.5s ease-in-out forwards 0.5s;
-  font-family: "Lucida Console", Courier, cursive;
+  font-family:  'Noto Serif Display', serif;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
