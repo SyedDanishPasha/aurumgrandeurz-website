@@ -78,6 +78,7 @@
     font-size: 12px; /* Shrink font size when scrolled */
   }
   
+  
   /* Mobile responsiveness */
   @media (max-width: 768px) {
     .header-container {

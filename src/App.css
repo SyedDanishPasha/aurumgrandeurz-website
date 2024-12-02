@@ -24,6 +24,7 @@
 .floating-button:hover {
   background-color: #0A0A0A;
   color: #ff6347;   /* Change background on hover */
+  transform: translateY(-10%);
 }
 
 .floating-button span {

@@ -67,7 +67,7 @@
 }
 
 .form-container:hover {
-  transform: translateY(-52%);
+  transform: translateY(-40%);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
@@ -252,7 +252,7 @@ form button:active {
     transform: translateY(0);
   }
 }
-
+ 
 /* Mobile-Specific Styles */
 @media (max-width: 768px) {
   .hero-section {
