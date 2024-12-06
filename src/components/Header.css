@@ -1,6 +1,6 @@
 /* Header CSS with golden and black theme */
 .header-container {
-  background-color: #0A0A0A; /* Semi-transparent white background */
+  background: linear-gradient(to bottom, #020816, #0A0A0A);
   color: #FDF7E9;
   padding: 10px 150px; /* Adjust padding */
   display: flex;
@@ -12,14 +12,14 @@
   right: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(10, 10, 10, 0.5); /* Adjust shadow for shrunk state */
 }
 
 .header-container.shrunk {
   padding: 5px 50px; /* Reduce padding when header shrinks */
   font-size: 10px; /* Shrink font size */
   background-color: #0A0A0A;
-  border-bottom: 1px solid #FDF7E9; /* Change border color when shrunk */
-  box-shadow: 0 5px 10px rgba(253, 247, 233, 0.5); /* Adjust shadow for shrunk state */
+  box-shadow: 0 5px 10px rgba(10, 10, 10, 0.5); /* Adjust shadow for shrunk state */
 }
   
   .logo-container {
