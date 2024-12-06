@@ -64,10 +64,10 @@ const Hero = () => {
 
       <div className="text-container">
         <h1 className="text-line-bold">
-          Are you trying to find a wedding planner in Bangalore?
+          Are you trying to find a event planner in Bangalore?
         </h1>
         <p className="text-line">
-          Speak with India's Leading Wedding Specialist Right Away
+          Speak with Bangalore's Leading Event Specialist Right Away
         </p>
       </div>
 
