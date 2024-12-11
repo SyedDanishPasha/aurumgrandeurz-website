@@ -22,131 +22,183 @@
   box-shadow: 0 5px 10px rgba(10, 10, 10, 0.5); /* Adjust shadow for shrunk state */
 }
   
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between logo and text */
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo and text */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-container:hover {
+  transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+.logo {
+  height: 100px; /* Default logo size */
+  max-height: 100px; /* Limit max height */
+  transition: height 0.3s ease-in-out;
+}
+
+.header-container.shrunk .logo {
+  height: 50px; /* Shrink logo size when scrolled */
+  max-height: 50px; /* Limit max height */
+}
+
+.logo-text {
+  font-size: 30px; /* Responsive font size */
+  color: #FDF7E9;
+  font-family: 'Noto Serif Display', serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: font-size 0.3s ease-in-out;
+  padding-left: 6px;
+}
+
+.header-container.shrunk .logo-text {
+  font-size: 16px; /* Shrink font size when scrolled */
+}
+
+.navbar {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-link {
+  text-decoration: none; /* Remove underline */
+  color: #FDF7E9; /* Default text color */
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.3s ease; /* Smooth transition for color and background */
+  padding: 5px 10px; /* Add some space around the text for the box */
+  border-radius: 5px; /* Optional: Rounded corners for the box */
+  font-family: 'Noto Serif Display', serif;
+}
+
+.navbar-link:hover {
+  color: #0A0A0A; /* Change text color on hover */
+  background-color: #FDF7E9; /* Add background color on hover */
+}
+
+.header-container.shrunk .navbar-link {
+  font-size: 16px; /* Shrink font size when scrolled */
+}
+
+/* Hamburger Menu */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 21px;
+  width: 30px;
+}
+
+.menu-icon .bar {
+  background-color: #FDF7E9;
+  height: 3px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Large Screens (Desktop & Laptops) */
+@media (max-width: 1200px) {
+  .header-container {
+    padding: 10px 100px; /* Slightly reduced padding for large screens */
   }
-  
-  .logo-container:hover {
-    transform: scale(1.1); /* Slight scale effect on hover */
-  }
-  
+
   .logo {
-    height: 100px; /* Default logo size */
-    transition: height 0.3s ease-in-out;
+    height: 8vw; /* Adjust logo size */
+    max-height: 80px; /* Limit max height */
   }
-  
-  .header-container.shrunk .logo {
-    height: 50px; /* Shrink logo size when scrolled */
-  }
-  
+
   .logo-text {
-    font-size: 30px;
-    color: #FDF7E9;
-    font-family:  'Noto Serif Display', serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: font-size 0.3s ease-in-out;
-    padding-left: 6px;
+    font-size: 3vw; /* Adjust font size for larger screens */
   }
-  
-  .header-container.shrunk .logo-text {
-    font-size: 16px; /* Shrink font size when scrolled */
-  }
-  
-  .navbar {
-    display: flex;
-    gap: 30px;
-  }
-  
+
   .navbar-link {
-    text-decoration: none; /* Remove underline */
-    color: #FDF7E9; /* Default text color */
-    font-weight: bold;
-    font-size: 18px;
-    transition: all 0.3s ease; /* Smooth transition for color and background */
-    padding: 5px 10px; /* Add some space around the text for the box */
-    border-radius: 5px; /* Optional: Rounded corners for the box */
-    font-family:  'Noto Serif Display', serif;
+    font-size: 16px; /* Adjust navbar link font size */
   }
-  
-  .navbar-link:hover {
-    color: #0A0A0A; /* Change text color on hover */
-    background-color: #FDF7E9; /* Add background color on hover */
-  }
-  
-  .header-container.shrunk .navbar-link {
-    font-size: 16px; /* Shrink font size when scrolled */
+}
+
+/* Medium Screens (Small Laptops and Tablets) */
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 10px 50px; /* Reduced padding for smaller laptops */
   }
 
-  /* Hamburger Menu */
-  .menu-icon {
-    display: none;
-    cursor: pointer;
+  .logo {
+    height: 10vw; /* Adjust logo size for medium screens */
+    max-height: 70px; /* Limit max height */
+  }
+
+  .logo-text {
+    font-size: 3.5vw; /* Slightly reduced font size */
+  }
+
+  .navbar {
+    gap: 20px; /* Adjust navbar gap */
+  }
+
+  .navbar-link {
+    font-size: 15px; /* Adjust font size */
+  }
+}
+
+/* Mobile Responsiveness (Tablets and below) */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 10px 20px; /* Reduce padding on small screens */
+  }
+
+  .logo {
+    height: 12vw; /* Adjust logo size for mobile */
+    max-height: 80px; /* Limit max height */
+  }
+
+  .logo-text {
+    font-size: 6vw; /* Larger font size on smaller screens */
+  }
+
+  .navbar {
+    display: none; /* Hide navbar links initially */
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 21px;
-    width: 30px;
+    gap: 15px;
+    padding-top: 20px;
   }
 
-  .menu-icon .bar {
-    background-color: #FDF7E9;
-    height: 3px;
-    width: 100%;
-    transition: all 0.3s ease;
+  .navbar.active {
+    display: flex; /* Show navbar links when 'active' class is added */
   }
-  
-  
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    .header-container {
-      padding: 10px 20px; /* Reduce padding on small screens */
-    }
-  
-    .navbar {
-      display: none; /* Hide navbar links initially */
-      flex-direction: column;
-      gap: 15px;
-      padding-top: 20px;
-    }
-  
-    .navbar.active {
-      display: flex; /* Show navbar links when 'active' class is added */
-    }
-  
-    .navbar-link {
-      font-size: 20px;
-      color: #FDF7E9;
-    }
 
-    .navbar-link:hover {
-      color: #0A0A0A;
-    }
-  
-    .menu-icon {
-      display: flex;
-    }
-
-    /* Hamburger icon turns into 'X' when menu is open */
-    .menu-icon.open .bar:nth-child(1) {
-        transform: rotate(45deg);
-        position: relative;
-        top: 7px;
-    }
-
-    .menu-icon.open .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-icon.open .bar:nth-child(3) {
-        transform: rotate(-45deg);
-        position: relative;
-        top: -7px;
-    }
-  
+  .navbar-link {
+    font-size: 14px;
+    color: #FDF7E9;
   }
-  
+
+  .navbar-link:hover {
+    color: #0A0A0A;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  /* Hamburger icon turns into 'X' when menu is open */
+  .menu-icon.open .bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 7px;
+  }
+
+  .menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon.open .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -7px;
+  }
+}

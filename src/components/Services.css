@@ -23,11 +23,8 @@
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
 }
 
 /* Styling for alternating layout */
@@ -51,6 +48,10 @@
 .service-details {
   flex: 1;
   text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .service-details h2 {
@@ -73,22 +74,6 @@
   line-height: 1.6;
 }
 
-.service-details .cta-button {
-  display: inline-block;
-  background-color: #ff6347;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 13px;
-  transition: background-color 0.3s ease;
-}
-
-.service-details .cta-button:hover {
-  background-color: #e5533b;
-}
-
 /* Service Image */
 .service-image {
   flex: 1;
@@ -99,6 +84,24 @@
   max-width: 100%;
   border-radius: 8px;
   object-fit: cover;
+}
+
+/* Button Below Image */
+.service-image .service-button{
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #ff6347;
+  color: #f9f9f9;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 13px;
+  transition: background-color 0.3s ease;
+}
+
+.service-image .service-button:hover {
+  background-color: #e5533b;
 }
 
 /* Responsive Design */
@@ -133,7 +136,7 @@
       font-size: 0.9rem;
   }
 
-  .service-details .cta-button {
+  .service-image .cta-button {
       font-size: 0.9rem;
   }
 }

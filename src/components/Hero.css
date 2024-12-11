@@ -8,6 +8,7 @@
   color: #fdf7e9;
   padding-top: 100px;
   overflow: hidden;
+  flex-direction: row; /* Default: Horizontal layout for large screens */
 }
 
 .hero-video {
@@ -22,7 +23,7 @@
 }
 
 .text-container {
-  max-width: 40%;
+  max-width: 40%; /* Limited width for large screens */
   color: #f9f9f9;
   padding-right: 250px;
   text-align: left;
@@ -35,7 +36,7 @@
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeIn 1.5s ease-in-out forwards;
-  font-family:  'Noto Serif Display', serif;
+  font-family: 'Noto Serif Display', serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -46,7 +47,7 @@
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeIn 1.5s ease-in-out forwards 0.5s;
-  font-family:  'Noto Serif Display', serif;
+  font-family: 'Noto Serif Display', serif;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -144,7 +145,6 @@ form select:focus {
 
 .date-picker-wrapper:focus-within {
   border-color: #ff6347;
-  
   box-shadow: none;
 }
 
@@ -195,7 +195,6 @@ form select:focus {
   background-color: #ff6347;
   color: #fff;
 }
-
 
 .react-datepicker__day:hover {
   background-color: #e5533b;
@@ -255,6 +254,33 @@ form button:active {
 }
  
 /* Mobile-Specific Styles */
+@media (max-width: 1024px) {
+  .hero-section {
+    flex-direction: row; /* Keep horizontal layout for large laptops */
+  }
+
+  .text-container {
+    max-width: 50%; /* Adjust text width */
+  }
+
+  .form-container {
+    position: absolute;
+    right: 5%;
+    top: 55%; /* Adjust form positioning */
+    transform: translateY(-50%);
+    width: 350px; /* Adjust form width */
+  }
+
+  .text-line-bold {
+    font-size: 2.5rem; /* Adjust text size */
+  }
+
+  .text-line {
+    font-size: 2rem; /* Adjust text size */
+  }
+}
+
+/* Tablet and smaller screens */
 @media (max-width: 768px) {
   .hero-section {
     flex-direction: column; /* Stack text and form vertically */
