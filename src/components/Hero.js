@@ -43,7 +43,7 @@ const Hero = () => {
       return;
     }
 
-    const whatsappNumber = "919611170926";
+    const whatsappNumber = "919742799998";
     const formattedDate = formData.eventDate.toISOString().slice(0, 10);
     const whatsappMessage = `Hello, my name is ${formData.fullName}. I am interested in wedding planning for ${formattedDate} at ${formData.location}. Please contact me at ${formData.code} ${formData.phone}.`;
 

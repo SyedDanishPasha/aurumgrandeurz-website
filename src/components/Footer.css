@@ -21,11 +21,13 @@
 }
 
 .logo-container {
-  text-align: center;
+  align-items: center;
+  padding-left: 110px;
 }
 
 .logo {
   max-width: 120px; /* Set max width for logo */
+  align-items: center;
 }
 
 .footer-container .logo-text {

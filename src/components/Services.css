@@ -81,7 +81,7 @@
 }
 
 .service-image img {
-  max-width: 100%;
+  max-width: 50%;
   border-radius: 8px;
   object-fit: cover;
 }

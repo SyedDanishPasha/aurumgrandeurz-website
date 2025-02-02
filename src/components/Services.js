@@ -38,16 +38,16 @@ const Services = () => {
         {/* Second Card */}
         <div className="service-card image-left">
           <div className="service-image">
-            <img src={BrandLogo} alt="Branding" />
+            <img src={BrandLogo} alt="Konnects" />
             <button
               className="service-button"
-              onClick={() => redirectToDetails("Branding")}
+              onClick={() => redirectToDetails("Konnects")}
             >
               Know More
             </button>
           </div>
           <div className="service-details">
-            <h2>Branding</h2>
+            <h2>Konnects</h2>
             <h3>Building Your Brand, Elevating Your Presence</h3>
             <p>
               At Aurum Grandeurz, we specialize in helping your brand grow with professional photography, social media management, website development, and logo design.
@@ -91,7 +91,7 @@ const Services = () => {
               </button>
             </div>
             <div className="service-details">
-              <h2>Product Lunch</h2>
+              <h2>Product Launch</h2>
               <h3>Building Your Brand, Elevating Your Presence</h3>
               <p>
                 At Aurum Grandeurz, we specialize in helping your brand grow with professional photography, social media management, website development, and logo design.
