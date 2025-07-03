@@ -24,10 +24,10 @@
   
 .logo-container {
   display: flex;
-  align-items: center;
   gap: 10px; /* Space between logo and text */
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  align-items: center;
 }
 
 .logo-container:hover {

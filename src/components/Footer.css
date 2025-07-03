@@ -26,9 +26,14 @@
 }
 
 .logo {
-  max-width: 120px; /* Set max width for logo */
+  max-width: 250px; /* Set max width for logo */
   align-items: center;
 }
+
+.logo:hover {
+  transform: scale(1.1); /* Slight scale effect on hover */
+}
+
 
 .footer-container .logo-text {
   display: block;
@@ -43,7 +48,6 @@
   justify-content: center;
   gap: 15px;
 }
-
 
 .social-icon {
   color: #FDF7E9;

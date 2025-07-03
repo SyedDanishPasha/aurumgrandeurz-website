@@ -18,40 +18,37 @@
   gap: 40px;
 }
 
+/* Service Card Layout */
 .service-card {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
   padding: 20px;
-  
 }
 
-/* Styling for alternating layout */
-.service-card.image-right .service-container {
+/* Layout Container inside each Card */
+.service-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
+}
+
+/* Alternating direction logic */
+.service-card.image-right .service-container {
+  flex-direction: row;
 }
 
 .service-card.image-left .service-container {
-  display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
 }
 
 /* Service Details */
 .service-details {
   flex: 1;
-  text-align: center;
+  text-align: left;
   background: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
 }
 
 .service-details h2 {
@@ -77,66 +74,83 @@
 /* Service Image */
 .service-image {
   flex: 1;
+  min-width: 300px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: none;
 }
 
 .service-image img {
-  max-width: 50%;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
   border-radius: 8px;
   object-fit: cover;
+  
 }
 
 /* Button Below Image */
-.service-image .service-button{
-  display: inline-block;
-  margin-top: 20px;
+.service-button {
   background-color: #ff6347;
   color: #f9f9f9;
   border: none;
-  padding: 10px 15px;
+  padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
   border-radius: 13px;
   transition: background-color 0.3s ease;
 }
 
-.service-image .service-button:hover {
+.service-button:hover {
   background-color: #e5533b;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .service-card {
-      flex-direction: column;
+  .service-container {
+    flex-direction: column !important;
   }
 
-  .service-card .service-container {
-      flex-direction: column;
+  .service-details {
+    text-align: center;
   }
 
-  .service-image {
-      margin-bottom: 20px;
+  .service-image img {
+    max-width: 250px;
   }
 }
 
 @media (max-width: 768px) {
   .services-section h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .service-details h2 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .service-details h3 {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
   .service-details p {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
-  .service-image .cta-button {
-      font-size: 0.9rem;
+  .service-button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-image img {
+    max-width: 220px;
+  }
+
+  .service-button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
   }
 }
