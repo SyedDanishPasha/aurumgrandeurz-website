@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <header className={`header-container ${isScrolling ? 'shrunk' : ''}`}>
       <div className="logo-container">
-        <img src={Logo} alt="Wedding Planner Logo" className="logo" />
+        <img src={Logo} alt="Wedding Planner Logo" className="logo" onClick={() => window.location.reload()} />
         <span className="logo-text">Aurum Grandeurz</span>
       </div>
       <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>

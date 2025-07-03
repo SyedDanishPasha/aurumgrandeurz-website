@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="footer-section logo-section">
           <div className="logo-main-container">
             <div className="logo-subcontainer">
-              <img src={Logo} alt="Aurum Grandeurz Logo" className="logo" />
+              <img src={Logo} alt="Aurum Grandeurz Logo" className="logo-footer" />
             </div>
             <div className="social-subcontainer">
               <a href="https://www.instagram.com/aurum_grandeurz?igsh=cWRlOGN5enphZ3Ry" target="_blank" rel="noopener noreferrer">

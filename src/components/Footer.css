@@ -25,12 +25,12 @@
   padding-left: 110px;
 }
 
-.logo {
+.logo-footer {
   max-width: 250px; /* Set max width for logo */
   align-items: center;
 }
 
-.logo:hover {
+.logo-footer:hover {
   transform: scale(1.1); /* Slight scale effect on hover */
 }
 
