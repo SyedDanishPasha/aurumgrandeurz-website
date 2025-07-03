@@ -6,32 +6,45 @@ import Gallery from "./components/Gallery";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
 import { LiaArrowCircleUpSolid } from "react-icons/lia";
-import './App.css'; // Import the external CSS file for the floating button
+import './App.css';
+import Logo from "./images/AurumGrandeurzLogo.png"; // Import your logo
 
 function App() {
-  const [isVisible, setIsVisible] = useState(false); // Track if the button should be visible
+  const [isVisible, setIsVisible] = useState(false);
+  const [loading, setLoading] = useState(true); // Add loading state
 
-  // Function to check the scroll position (change 300 to 100)
+  // Splash timeout
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000); // 2-second splash
+    return () => clearTimeout(timer);
+  }, []);
+
   const checkScrollPosition = () => {
     if (window.scrollY > 100) {
-      setIsVisible(true); // Show button if scrolled more than 100px
+      setIsVisible(true);
     } else {
-      setIsVisible(false); // Hide button if scrolled to top
+      setIsVisible(false);
     }
   };
 
-  // Scroll to the top of the page
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Adding event listener on mount and removing it on unmount
   useEffect(() => {
     window.addEventListener('scroll', checkScrollPosition);
-
-    // Cleanup
     return () => window.removeEventListener('scroll', checkScrollPosition);
   }, []);
+
+  if (loading) {
+    return (
+      <div className="loader-container">
+        <div className="loader-logo">
+          <img src={Logo} alt="Loading Logo" />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <Router>
@@ -42,13 +55,12 @@ function App() {
       <Gallery />
       <Services />
       <Footer />
-      
-      {/* Floating Button */}
+
       <div
         className={`floating-button ${isVisible ? 'visible' : ''}`}
-        onClick={scrollToTop} // When clicked, scroll to top
+        onClick={scrollToTop}
       >
-        <span><LiaArrowCircleUpSolid /></span> {/* Up arrow symbol */}
+        <span><LiaArrowCircleUpSolid /></span>
       </div>
     </Router>
   );
