@@ -46,9 +46,9 @@ const Footer = () => {
 
           <hr />
           <ul>
-            <li><button className="footer-service-link" onClick={() => redirectToWhatsApp("Wedding Planner")}>Wedding Planner</button></li>
-            <li><button className="footer-service-link" onClick={() => redirectToWhatsApp("Al Tijarah")}>Al Tijarah</button></li>
-            <li><button className="footer-service-link" onClick={() => redirectToWhatsApp("Branding")}>Branding</button></li>
+            <li><button className="footer-service-link" onClick={() => redirectToWhatsApp("Wedding Planner")}>Al Tijarah</button></li>
+            <li><button className="footer-service-link" onClick={() => redirectToWhatsApp("Al Tijarah")}>Konnects</button></li>
+            <li><button className="footer-service-link" onClick={() => redirectToWhatsApp("Branding")}>Events</button></li>
             <li><button className="footer-service-link" onClick={() => redirectToWhatsApp("Product Launch")}>Product Launch</button></li>
           </ul>
         </div>
