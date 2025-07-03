@@ -6,102 +6,89 @@ import EventLogo from "../images/EventLogo.png";
 import ProductLaunchLogo from "../images/ProductLaunchLogo.png";
 
 const Services = () => {
-  const redirectToDetails = (service) => {
-    window.location.href = `/services/${service.toLowerCase().replace(/\s+/g, "-")}`;
+  const redirectToDetails = (serviceSlug) => {
+    const url = `/services/${serviceSlug}`;
+    window.open(url, "_blank"); // Open in a new tab
   };
 
   return (
     <section id="services" className="services-section">
       <h2>Our Services</h2>
       <div className="service-cards">
-        {/* First Card */}
+        {/* Al Tijarah */}
         <div className="service-card image-right">
           <div className="service-container">
             <div className="service-details">
               <h2>Al Tijarah</h2>
               <h3>A Carnival of Brands and Entertainment</h3>
               <p>
-                Al Tijarah is an exciting event that brings together brands, products, and services in a vibrant marketplace. It’s perfect for business owners and families looking for fun and entertainment.
+                Al Tijarah is an exciting event that brings together brands, products, and services in a vibrant marketplace.
               </p>
               <p>Explore products, enjoy live performances, and discover hidden gems. Entry is free!</p>
             </div>
             <div className="service-image">
               <img src={ALTijarahLogo} alt="Al Tijarah" />
-              <button
-                className="service-button"
-                onClick={() => redirectToDetails("Al Tijarah")}
-              >
+              <button className="service-button" onClick={() => redirectToDetails("al-tijarah")}>
                 Know More
               </button>
             </div>
           </div>
         </div>
 
-        {/* Second Card */}
+        {/* Konnects */}
         <div className="service-card image-left">
           <div className="service-container">
             <div className="service-details">
               <h2>Konnects</h2>
               <h3>Building Your Brand, Elevating Your Presence</h3>
               <p>
-                At Aurum Grandeurz, we specialize in helping your brand grow with professional photography, social media management, website development, and logo design.
+                We help your brand grow with photography, social media, website dev, and logo design.
               </p>
-              <p>Let us bring your vision to life with stunning visuals, engaging content, and strategic online presence.</p>
+              <p>Let us bring your vision to life with stunning visuals and strategy.</p>
             </div>
             <div className="service-image">
               <img src={BrandLogo} alt="Konnects" />
-              <button
-                className="service-button"
-                onClick={() => redirectToDetails("Konnects")}
-              >
+              <button className="service-button" onClick={() => redirectToDetails("konnects")}>
                 Know More
               </button>
             </div>
           </div>
         </div>
 
-        {/* Third Card */}
+        {/* Events */}
         <div className="service-card image-right">
           <div className="service-container">
             <div className="service-details">
               <h2>Events</h2>
               <h3>Memorable Celebrations</h3>
               <p>
-                From weddings to corporate events, we plan and execute each occasion with perfection and passion. Let us handle the details while you enjoy the moment.
+                From weddings to corporate events, we handle it all so you can enjoy every moment.
               </p>
               <p>We bring creativity, coordination, and charm to every celebration.</p>
             </div>
             <div className="service-image">
               <img src={EventLogo} alt="Events" />
-              <button
-                className="service-button"
-                onClick={() => redirectToDetails("Events")}
-              >
+              <button className="service-button" onClick={() => redirectToDetails("events")}>
                 Know More
               </button>
             </div>
           </div>
         </div>
 
-        {/* Fourth Card */}
+        {/* Product Launch */}
         <div className="service-card image-left">
           <div className="service-container">
             <div className="service-details">
               <h2>Product Launch</h2>
               <h3>Make an Impact from Day One</h3>
               <p>
-                Launch your product with style and strategy. We offer branding, visual storytelling, and event management tailored for product unveilings.
+                Launch with style and buzz. We handle branding, visual storytelling, and event rollout.
               </p>
-              <p>
-                Create buzz and connect with your audience from the first moment.
-              </p>
+              <p>Connect with your audience from the very first moment.</p>
             </div>
             <div className="service-image">
               <img src={ProductLaunchLogo} alt="Product Launch" />
-              <button
-                className="service-button"
-                onClick={() => redirectToDetails("Product Launch")}
-              >
+              <button className="service-button" onClick={() => redirectToDetails("product-launch")}>
                 Know More
               </button>
             </div>
