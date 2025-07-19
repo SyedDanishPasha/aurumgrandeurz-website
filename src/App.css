@@ -28,7 +28,7 @@
   right: 30px;
   width: 60px;
   height: 60px;
-  background-color: #ff6347;
+  background-color: #d8a850;
   color: #f9f9f9;
   border-radius: 50%;
   cursor: pointer;
@@ -53,10 +53,8 @@
 }
 
 
-
-
 .floating-button:hover {
-    background-color: #0A0A0A;  /* Change background on hover */
+    background-color: #b88a3d;  /* Change background on hover */
 }
   
 
